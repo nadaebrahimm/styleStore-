@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - StyleStore</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>StyleStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Checkout</h2>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Shopping Cart</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Checkout</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Complete</div>
+                </div>
+            </div>
+
+            <div class="checkout-container">
+                <div class="checkout-form-container">
+                    <div class="checkout-form">
+                        <div class="checkout-form-header">
+                            <h3>Billing & Shipping</h3>
+                        </div>
+                        <div class="checkout-form-body">
+                            <form id="checkout-form">
+                                <div class="checkout-form-section">
+                                    <h4 class="section-title">Contact Information</h4>
+                                    <div class="input-row">
+                                        <div class="input-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="checkout-form-section">
+                                    <h4 class="section-title">Shipping Address</h4>
+                                    <div class="input-row">
+                                        <div class="input-group">
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" id="firstName" name="firstName" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" id="lastName" name="lastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="input-group full-width">
+                                        <label for="address">Address</label>
+                                        <input type="text" id="address" name="address" required>
+                                    </div>
+                                    <div class="input-group full-width">
+                                        <label for="apartment">Apartment, suite, etc. (optional)</label>
+                                        <input type="text" id="apartment" name="apartment">
+                                    </div>
+                                    <div class="input-row">
+                                        <div class="input-group">
+                                            <label for="city">City</label>
+                                            <input type="text" id="city" name="city" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="state">State/Province</label>
+                                            <select id="state" name="state" required>
+                                                <option value="">Select State/Province</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <!-- More states would be added here -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-row">
+                                        <div class="input-group">
+                                            <label for="zip">ZIP/Postal Code</label>
+                                            <input type="text" id="zip" name="zip" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="country">Country</label>
+                                            <select id="country" name="country" required>
+                                                <option value="">Select Country</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <option value="AU">Australia</option>
+                                                <!-- More countries would be added here -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="checkout-form-section">
+                                    <h4 class="section-title">Payment Method</h4>
+                                    <div class="card-icons">
+                                        <div class="card-icon"><i class="fab fa-cc-visa"></i></div>
+                                        <div class="card-icon"><i class="fab fa-cc-mastercard"></i></div>
+                                        <div class="card-icon"><i class="fab fa-cc-amex"></i></div>
+                                        <div class="card-icon"><i class="fab fa-cc-discover"></i></div>
+                                    </div>
+                                    <div class="card-inputs">
+                                        <div class="input-group card-number">
+                                            <label for="cardNumber">Card Number</label>
+                                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                        </div>
+                                        <div class="input-group card-expiry">
+                                            <label for="cardExpiry">Expiration Date (MM/YY)</label>
+                                            <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" required>
+                                        </div>
+                                        <div class="input-group card-cvc">
+                                            <label for="cardCvc">CVC</label>
+                                            <input type="text" id="cardCvc" name="cardCvc" placeholder="123" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="checkout-form-section">
+                                    <h4 class="section-title">Additional Information</h4>
+                                    <div class="input-group full-width">
+                                        <label for="notes">Order Notes (optional)</label>
+                                        <textarea id="notes" name="notes" rows="4" placeholder="Notes about your order, e.g. special delivery instructions"></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="checkout-btn">Place Order</button>
+                                
+                                <div class="security-badges">
+                                    <div class="security-badge">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Secure Payment</span>
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>SSL Encrypted</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-summary-container">
+                    <div class="cart-summary">
+                        <div class="cart-summary-header">
+                            <h3>Order Summary</h3>
+                        </div>
+                        <div class="cart-summary-body" id="cart-summary">
+                            <!-- This will be populated by JavaScript -->
+                        </div>
+
+                        <div class="cart-summary-body">
+                            <div class="promo-form">
+                                <input type="text" placeholder="Promo Code" id="promo-code">
+                                <button type="button" id="apply-promo">Apply</button>
+                            </div>
+                            
+                            <!-- Uncomment to show applied promo code 
+                            <div class="promo-code-applied">
+                                <span>WELCOME10 - 10% off</span>
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleStore</h3>
+                    <p>Your one-stop shop for fashion and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 StyleStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading overlay (hidden by default) -->
+    <div class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Additional checkout page specific script
+        document.getElementById('apply-promo').addEventListener('click', function() {
+            const promoCode = document.getElementById('promo-code').value.trim();
+            if (promoCode) {
+                // Here you would validate the promo code
+                // For demo purposes, we'll just show a notification
+                showNotification(`Promo code "${promoCode}" applied!`);
+                document.getElementById('promo-code').value = '';
+            }
+        });
+        
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading overlay
+            document.querySelector('.loading-overlay').style.display = 'flex';
+            
+            // Simulate processing
+            setTimeout(function() {
+                // Hide loading overlay
+                document.querySelector('.loading-overlay').style.display = 'none';
+                
+                // Redirect to order confirmation page
+                window.location.href = 'thank-you.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

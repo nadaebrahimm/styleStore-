@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - StyleStore</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .thank-you-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .thank-you-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thank-you-container i {
+            font-size: 60px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .thank-you-container p {
+            margin-bottom: 30px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .order-details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .order-details h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .order-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .order-info div {
+            flex: 0 0 48%;
+            margin-bottom: 10px;
+        }
+        
+        .order-info span {
+            display: block;
+        }
+        
+        .order-info .label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .order-info .value {
+            font-size: 15px;
+            color: #333;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 30px 20px;
+            }
+            
+            .order-info div {
+                flex: 0 0 100%;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>StyleStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-container">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You for Your Order!</h2>
+                <p>Your order has been received and is now being processed. We've sent you an email with all the details.</p>
+                
+                <div class="order-details">
+                    <h3>Order Information</h3>
+                    <div class="order-info">
+                        <div>
+                            <span class="label">Order Number</span>
+                            <span class="value">#ST-2025-04-12</span>
+                        </div>
+                        <div>
+                            <span class="label">Date</span>
+                            <span class="value">April 12, 2025</span>
+                        </div>
+                        <div>
+                            <span class="label">Payment Method</span>
+                            <span class="value">Credit Card</span>
+                        </div>
+                        <div>
+                            <span class="label">Shipping Method</span>
+                            <span class="value">Standard Shipping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <a href="../index.html" class="btn">Return to Home</a>
+                    <a href="products.html" class="btn">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleStore</h3>
+                    <p>Your one-stop shop for fashion and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 StyleStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
